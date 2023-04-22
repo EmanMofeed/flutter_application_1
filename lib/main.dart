@@ -340,11 +340,12 @@ class _AddApartmentScreenState extends State<AddApartmentScreen> {
                     return null;
                   },
                   onSaved: (value) {
-                    _OwnerID = value! as int;
+                    _OwnerID = int.tryParse(value!) ?? 0;
+
                   },
                 ),
-                                SizedBox(height: 16),
-
+                SizedBox(height: 16),
+                
                 Text('Images'),
                 SizedBox(height: 8),
                 Row(
